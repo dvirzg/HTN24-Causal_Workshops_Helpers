@@ -37,7 +37,7 @@ def data_dicti(df):
             col_info['Variable Type'] = 'Categorical'
             col_info['Range'] = [df[col].min(), df[col].max()]
             col_info['Unique Values'] = df[col].nunique()
-            col_info['Most Frequent'] = df[col].mode().iloc[0]
+            col_info['Most Frequent'] = int(df[col].mode().iloc[0])
             if col_info['Unique Values'] <= 5:
                 col_info['Partial Listed Values'] = np.sort(df[col].unique())
 
