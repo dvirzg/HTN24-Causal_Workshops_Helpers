@@ -11,13 +11,13 @@ import numpy as np
 def highlight_variable_type(s):
     color = ''
     if s['Variable Type'] == 'Continuous':
-        color = 'background-color: lightblue'
+        color = 'background-color: blue'
     elif s['Variable Type'] == 'Datetime':
-        color = 'background-color: lightyellow'
+        color = 'background-color: yellow'
     elif s['Variable Type'] == 'Boolean':
-        color = 'background-color: lightred'
+        color = 'background-color: red'
     elif s['Variable Type'] == 'Categorical':
-        color = 'background-color: lightgreen'
+        color = 'background-color: green'
     return [color]*len(s)
 
 def data_dicti(df):
